@@ -8,7 +8,10 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
+  <%= render 'layouts/sidenav' %>
+  <%= yield %>
+</div>
 
 </body>
 </html>
