@@ -1,0 +1,18 @@
+/* side-nav */
+
+
+.side-nav{
+  width: 10%;
+  height: inherit;
+  background-color: rgba(100, 100, 120, 0.3);
+  font-family: 'Exo 2', sans-serif;
+  #nav-brand{
+    background-color: rgba(0,0,0,0.3);
+    font-size: 1.4em;
+  }
+  & li{
+    & a{
+      color: black;
+    }
+  }
+}

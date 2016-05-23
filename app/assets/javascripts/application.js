@@ -4,8 +4,12 @@
 //= require turbolinks
 //= require_tree .
 
-var ready = function () {
+var ready = function() {
+  nav_height();
+}
 
+var nav_height = function() {
+  $('.nav').height($(window).height());
 }
 
 $(document).ready(ready);
