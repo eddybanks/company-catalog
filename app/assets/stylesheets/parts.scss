@@ -1,18 +1,19 @@
 /* side-nav */
 
-
 .side-nav{
-  width: 10%;
-  height: inherit;
-  background-color: rgba(100, 100, 120, 0.3);
   font-family: 'Exo 2', sans-serif;
   #nav-brand{
-    background-color: rgba(0,0,0,0.3);
+    color: rgba(255,255,255,0.5);
+    background-color: rgba(0,0,0,0.7);
     font-size: 1.4em;
   }
   & li{
-    & a{
-      color: black;
+    a:link, a:visited{
+      color: rgba(255,255,255,0.5);
+    }
+    a:hover, a:active{
+      background-color: rgba(40,40,40,0.2);
+      color: rgba(255,200,255,0.3);
     }
   }
 }

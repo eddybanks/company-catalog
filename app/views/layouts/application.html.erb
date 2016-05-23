@@ -9,8 +9,19 @@
 <body>
 
 <div id="wrapper">
-  <%= render 'layouts/sidenav' %>
-  <%= yield %>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <%= render 'layouts/sidenav' %>
+      </div>
+      <div class="col-md-11">
+        <% if !@page_header.blank? %>
+          <%= render 'layouts/header' %>
+        <% end %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>
