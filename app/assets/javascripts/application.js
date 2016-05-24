@@ -12,7 +12,7 @@ var ready = function() {
 }
 
 var nav_height = function() {
-  $('.nav').height($(window).height());
+  $('.side-nav').height($(window).height());
 }
 
 $(document).ready(ready);
