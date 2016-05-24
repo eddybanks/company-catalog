@@ -1,0 +1,17 @@
+<div class="search-form">
+  <div class="container">
+    <%= search_form_for @q, url: search_employees_path, html: { method: :post } do |f| %>
+
+      <br /><br />
+      <div class="form-group form-inline">
+        <%= f.search_field 'first_name', placeholder: 'First Name', class: 'form-control' %>
+        <%= f.search_field 'last_name', placeholder: 'Last Name', class: 'form-control' %>
+      </div>
+
+      <div class="submit-button">
+        <%= f.submit 'Search', class: 'btn btn-default' %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

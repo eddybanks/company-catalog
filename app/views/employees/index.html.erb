@@ -1,17 +1,17 @@
 <table class="table table-striped table-responsive table-hover table-bordered">
   <thead>
     <tr>
-      <th>Last name</th>
-      <th>First name</th>
-      <th>Email</th>
-      <th>Nationality</th>
-      <th>Address</th>
-      <th>Gender</th>
-      <th>Birth date</th>
-      <th>Phone number</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Department</th>
+      <th><%= sort_link @q, :last_name %></th>
+      <th><%= sort_link @q, :first_name %></th>
+      <th><%= sort_link @q, :email %></th>
+      <th><%= sort_link @q, :nationality %></th>
+      <th><%= sort_link @q, :address %></th>
+      <th><%= sort_link @q, :gender %></th>
+      <th><%= sort_link @q, :birth_date %></th>
+      <th><%= sort_link @q, :phone_number %></th>
+      <th><%= sort_link @q, :start_date %></th>
+      <th><%= sort_link @q, :end_date %></th>
+      <th><%= sort_link @q, :department %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -37,7 +37,9 @@
     <% end %>
   </tbody>
 </table>
-<%= paginate @employees %>
+<% if Employee.all.count > 25 %>
+  <%= paginate @employees %>
+<% end %>
 
 <br>
 

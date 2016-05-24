@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
 gem 'kaminari'
 gem 'react-rails'
+gem 'ransack'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'

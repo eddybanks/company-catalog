@@ -26,6 +26,9 @@
     <% end %>
   </tbody>
 </table>
+<% if Project.all.count > 25 %>
+  <%= paginate @projects %>
+<% end %>
 
 <br>
 

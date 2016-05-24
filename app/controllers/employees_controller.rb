@@ -4,7 +4,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.order(:last_name).page params[:page]
+    @q = Employee.ransack(params[:q])
+    @employees = @q.result.order(:last_name).page(params[:page])
   end
 
   # GET /employees/1
@@ -59,6 +60,11 @@ class EmployeesController < ApplicationController
       format.html { redirect_to employees_url, notice: 'Employee was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    index
+    render :index
   end
 
   private

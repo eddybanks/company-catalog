@@ -1,4 +1,3 @@
-<div class="something">
 <table class="table table-striped table-responsive table-hover table-bordered">
   <thead>
     <tr>
@@ -22,7 +21,9 @@
     <% end %>
   </tbody>
 </table>
-</div>
+<% if Department.all.count > 25 %>
+  <%= paginate @departments %>
+<% end %>
 
 <br>
 

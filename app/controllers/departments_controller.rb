@@ -4,7 +4,8 @@ class DepartmentsController < ApplicationController
   # GET /departments
   # GET /departments.json
   def index
-    @departments = Department.all
+    @q = Department.ransack(params[:q])
+    @departments = @q.result(distinct: true).order(:name).page params[:page]
   end
 
   # GET /departments/1
@@ -59,6 +60,11 @@ class DepartmentsController < ApplicationController
       format.html { redirect_to departments_url, notice: 'Department was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    index
+    render :index
   end
 
   private

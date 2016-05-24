@@ -4,7 +4,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @q = Project.ransack(params[:q])
+    @projects = @q.result(distinct: true).order(:name).page params[:page]
   end
 
   # GET /projects/1
@@ -59,6 +60,11 @@ class ProjectsController < ApplicationController
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def search
+    index
+    render :index
   end
 
   private
