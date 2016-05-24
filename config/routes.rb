@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :companies do
+    collection do
+      match 'search' => 'companies#search', via: [:get, :post], as: :search
+    end
+  end
+
   resources :employees do
     collection do
       match 'search' => 'employees#search', via: [:get, :post], as: :search
@@ -18,7 +24,7 @@ Rails.application.routes.draw do
     end
   end
 
-  root                  'employees#index'
+  root                  'companies#index'
 
   get 'about'       =>  'home#about'
 
