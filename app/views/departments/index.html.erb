@@ -1,3 +1,4 @@
+<div class="something">
 <table class="table table-striped table-responsive table-hover table-bordered">
   <thead>
     <tr>
@@ -21,8 +22,9 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 
 <%= link_to 'New Department', new_department_path, class: 'btn btn-default' %>
-<%= @searchable = true %>
+<% @searchable = true %>
