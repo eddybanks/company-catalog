@@ -1,4 +1,35 @@
 <div class="search-form">
-  <%= search_form_for @q, url: search_departments_path, html: { method: :post } do |f| %>
+  <%= search_form_for @q, url: search_companies_path, html: { method: :post } do |f| %>
+  <div class="search-box">
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="field col-md-4">
+          <%= f.label :name_cont, 'Name', class: 'hide' %>
+          <%= f.search_field :name_cont, class: 'form-control', placeholder: 'Company name' %>
+        </div>
+
+        <div class="field col-md-4">
+          <%= f.label :industry_cont, 'Industry', class: 'hide' %>
+          <%= f.search_field :industry_cont, class: 'form-control', placeholder: 'Industry' %>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="field col-md-4">
+          <%= f.label :directors_cont, 'Directors', class: 'hide' %>
+          <%= f.search_field :directors_cont, class: 'form-control', placeholder: 'Directors' %>
+        </div>
+
+        <div class="field col-md-12">
+          <%= f.submit 'Search', class: 'btn btn-primary' %>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
   <% end %>
 </div>

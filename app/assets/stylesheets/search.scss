@@ -1,4 +1,10 @@
 .search-form{
   min-height: 250px;
   background-color: rgba(0,0,0, 0.3);
+  .search-box{
+    padding: 40px 0 0 20px;
+  }
+  .field{
+    padding: 0 0 5px 10px;
+  }
 }

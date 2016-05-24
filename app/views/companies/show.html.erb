@@ -17,7 +17,7 @@
 
 <p>
   <strong>Directors:</strong>
-  <%= @company.directors %>
+  <% eval(@company.directors).map do |d| %><%= d[:name] %>, <% end%>
 </p>
 
 <p>
@@ -35,5 +35,5 @@
   <%= @company.email %>
 </p>
 
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-default' %> |
+<%= link_to 'Back', companies_path, class: 'btn btn-default' %>
