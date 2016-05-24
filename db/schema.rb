@@ -57,12 +57,13 @@ ActiveRecord::Schema.define(version: 20160523231926) do
     t.string   "email"
     t.string   "nationality"
     t.text     "address"
+    t.integer  "ssnit"
     t.string   "gender"
     t.date     "birth_date"
     t.string   "phone_number"
     t.boolean  "manager_flag"
     t.date     "start_date"
-    t.string   "end_date"
+    t.date     "end_date"
     t.integer  "department_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
