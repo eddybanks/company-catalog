@@ -5,26 +5,52 @@
     <div class="container-fluid">
       <div class="row">
 
-        <div class="field col-md-4">
+        <div class="field col-md-3">
           <%= f.label :name_cont, 'Name', class: 'hide' %>
           <%= f.search_field :name_cont, class: 'form-control', placeholder: 'Company name' %>
         </div>
 
-        <div class="field col-md-4">
+        <div class="field col-md-3">
           <%= f.label :industry_cont, 'Industry', class: 'hide' %>
           <%= f.search_field :industry_cont, class: 'form-control', placeholder: 'Industry' %>
+        </div>
+
+        <div class="field col-md-3">
+          <%= f.label :directors_cont, 'Directors', class: 'hide' %>
+          <%= f.search_field :directors_cont, class: 'form-control', placeholder: 'Directors' %>
         </div>
 
       </div>
       <div class="row">
 
-        <div class="field col-md-4">
-          <%= f.label :directors_cont, 'Directors', class: 'hide' %>
-          <%= f.search_field :directors_cont, class: 'form-control', placeholder: 'Directors' %>
+        <div class="field col-md-5">
+          <%= f.label :address_cont, 'Address', class: 'hide' %>
+          <%= f.search_field :address_cont, class: 'form-control', placeholder: 'Address' %>
         </div>
 
-        <div class="field col-md-12">
-          <%= f.submit 'Search', class: 'btn btn-primary' %>
+        <div class="field col-md-4">
+          <%= f.label :email_cont, 'Company Email', class: 'hide' %>
+          <%= f.search_field :email_cont, class: 'form-control', placeholder: 'Company Email' %>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="field col-md-1">
+          <%= f.check_box :registered_true, type: 'checkbox', data: { toggle: 'toggle', on: 'Registered', off: 'Unregistered', onstyle: 'info', offstyle: 'default' } %>
+          <%= f.label :registered_true, 'Company is Registered', class: 'hide' %>
+        </div>
+
+        <div class="field col-md-4">
+          <%= f.label :start_date, 'Start Date', class: 'hide' %>
+          <%= f.date_field :start_date, class: 'form-control', placeholder: 'Start Date' %>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div class="field col-md-3">
+          <%= f.submit 'Search', class: 'btn btn-primary form-control' %>
         </div>
 
       </div>
