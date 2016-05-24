@@ -2,7 +2,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Location</th>
       <th>Number</th>
       <th>Description</th>
       <th colspan="3"></th>
@@ -13,7 +12,6 @@
     <% @departments.each do |department| %>
       <tr>
         <td><%= department.name %></td>
-        <td><%= department.location %></td>
         <td><%= department.number %></td>
         <td><%= department.description %></td>
         <td><%= link_to 'Show', department %></td>
@@ -27,3 +25,4 @@
 <br>
 
 <%= link_to 'New Department', new_department_path, class: 'btn btn-default' %>
+<%= @searchable = true %>

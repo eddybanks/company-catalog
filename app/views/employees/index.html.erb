@@ -9,7 +9,6 @@
       <th>Gender</th>
       <th>Birth date</th>
       <th>Phone number</th>
-      <th>Manager flag</th>
       <th>Start date</th>
       <th>End date</th>
       <th>Department</th>
@@ -28,7 +27,6 @@
         <td><%= employee.gender %></td>
         <td><%= employee.birth_date %></td>
         <td><%= employee.phone_number %></td>
-        <td><%= employee.manager_flag %></td>
         <td><%= employee.start_date %></td>
         <td><%= employee.end_date %></td>
         <td><%= employee.department.name %></td>
@@ -43,3 +41,4 @@
 <br>
 
 <%= link_to 'New Employee', new_employee_path, class: 'btn btn-default' %>
+<%= @searchable = true %>
