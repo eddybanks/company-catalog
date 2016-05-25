@@ -11,8 +11,8 @@
         </div>
 
         <div class="field col-md-3">
-          <%= f.label :industry_cont, 'Industry', class: 'hide' %>
-          <%= f.search_field :industry_cont, class: 'form-control', placeholder: 'Industry' %>
+          <%= f.label :category_cont, 'Category', class: 'hide' %>
+          <%= f.search_field :category_cont, class: 'form-control', placeholder: 'Category' %>
         </div>
 
         <div class="field col-md-3">
@@ -36,14 +36,14 @@
       </div>
       <div class="row">
 
-        <div class="field col-md-1">
-          <%= f.check_box :registered_true, type: 'checkbox', data: { toggle: 'toggle', on: 'Registered', off: 'Unregistered', onstyle: 'info', offstyle: 'default' } %>
-          <%= f.label :registered_true, 'Company is Registered', class: 'hide' %>
+        <div class="field col-md-2">
+          <%= f.check_box :registered_true %>
+          <%= f.label :registered_true, 'Check if registered' %>
         </div>
 
         <div class="field col-md-4">
-          <%= f.label :start_date, 'Start Date', class: 'hide' %>
-          <%= f.date_field :start_date, class: 'form-control', placeholder: 'Start Date' %>
+          <%= f.label :registration_number_cont, 'Registration Number', class: 'hide' %>
+          <%= f.search_field :registration_number_cont, class: 'form-control', placeholder: 'Registration Number' %>
         </div>
 
       </div>

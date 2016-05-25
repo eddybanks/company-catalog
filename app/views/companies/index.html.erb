@@ -3,9 +3,10 @@
     <tr>
       <th><%= sort_link @q, :name %></th>
       <th><%= sort_link @q, :start_date %></th>
-      <th><%= sort_link @q, :industry %></th>
+      <th><%= sort_link @q, :category %></th>
       <th><%= sort_link @q, :directors %></th>
       <th><%= sort_link @q, :registered %></th>
+      <th><%= sort_link @q, :registration_number %></th>
       <th><%= sort_link @q, :address %></th>
       <th><%= sort_link @q, :email %></th>
       <th colspan="2"></th>
@@ -17,9 +18,10 @@
       <tr>
         <td><%= company.name %></td>
         <td><%= company.start_date %></td>
-        <td><%= company.industry %></td>
+        <td><%= company.category %></td>
         <td><% eval(company.directors).map do |d| %><%= d[:name] %>, <% end%></td>
         <td><% if company.registered? %>yes<% else %>no<% end %></td>
+        <td><%= company.registration_number %></td>
         <td><%= company.address %></td>
         <td><%= company.email %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
